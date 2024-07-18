@@ -1,49 +1,21 @@
-/* styles.css */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-}
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById("quoteModal");
+    const spans = document.getElementsByClassName("close")[0];
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 1em 0;
-}
+    document.querySelectorAll('.service-category ul li').forEach(item => {
+        item.addEventListener('click', () => {
+            modal.style.display = "block";
+        });
+    });
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-}
+    spans.onclick = function() {
+        modal.style.display = "none";
+    }
 
-nav ul li {
-    margin: 0 1em;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-section {
-    padding: 2em;
-    text-align: center;
-}
-
-h1, h2 {
-    color: #333;
-}
-
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+});
