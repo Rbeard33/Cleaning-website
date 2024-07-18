@@ -25,15 +25,48 @@ header {
 }
 
 .home-image {
-    max-width: 100%;
+    width: 100%;
     height: auto;
+    max-height: 600px; /* 1/4 shorter */
 }
 
 #services {
     padding: 2em;
 }
 
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+}
+
+.service-category {
+    background: #222;
+    padding: 1em;
+    border: 1px solid #0f0;
+}
+
 .service-category h3 {
+    color: #0f0;
+}
+
+.service-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-category li {
+    cursor: pointer;
+    color: #fff;
+}
+
+.service-category p {
+    color: #0f0;
+    cursor: pointer;
+}
+
+.service-category li:hover,
+.service-category p:hover {
     color: #0f0;
 }
 
